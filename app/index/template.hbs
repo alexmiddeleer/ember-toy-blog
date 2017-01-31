@@ -1,0 +1,17 @@
+<div class="page-title">A toy blog</div>
+<div class="current-post">
+  <div class="current-post-title">
+    {{currentPost.title}}
+  </div>
+  <div class="current-post-body">
+    {{currentPost.body}}
+  </div>
+</div>
+<div class="post-list">
+  {{#each model as |post|}}
+    <div class="post-list-item">
+      <div class="post-title">{{post.title}}</div>
+    </div>
+  {{/each}}
+</div>
+{{outlet}}
