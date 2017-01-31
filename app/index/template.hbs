@@ -10,7 +10,9 @@
 <div class="post-list">
   {{#each model as |post|}}
     <div class="post-list-item">
-      <div class="post-title">{{post.title}}</div>
+      {{#link-to "post" post.id}}
+        <div class="post-title">{{post.title}}</div>
+      {{/link-to}}
     </div>
   {{/each}}
 </div>

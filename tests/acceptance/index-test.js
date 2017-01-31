@@ -21,7 +21,7 @@ test('visiting /index', function(assert) {
 test('clicking a post item transitions to post page', function(assert) {
 
   visit('/index');
-  click('.post-list .post-list-item:first-of-type');
+  click('.post-list .post-list-item:first-of-type a');
 
   andThen(function() {
     assert.equal(currentURL(), '/post/1', 'we are now on a post page');
